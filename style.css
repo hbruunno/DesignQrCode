@@ -1,0 +1,130 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #098171;
+  padding: 10px;
+}
+
+.botao{
+  width: 40%; 
+  max-width: 300px; 
+  height: 50px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 15px;
+  background-color: #fff;
+  border: none;
+}
+
+.leitor{
+  display: none;
+  position: fixed;
+  width: 80%; 
+  max-width: 400px; 
+  height: 90%; 
+  max-height: 500px; 
+  background-color: azure;
+  z-index: 1000;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 15px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.botaoleitor{
+  display: flex;
+  justify-content: space-around;
+  gap: 10px; 
+  width: 100%;
+}
+
+.leitor.ligar{
+  display: flex;
+}
+
+.camera{
+  display: flex;
+  position: relative;
+  width: 80%;
+  height: 300px;
+  max-height: 50%;
+  background-color: rgba(0, 0, 0, 0.322);
+  border: 2px solid white;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.p{
+  display: flex;
+  justify-content: center;
+  margin-top: 40%;
+  font-weight: 300;
+  color: #fff;
+}
+/* responsável pela linha no scaner */
+.linha-leitura {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  top: 0;
+  /* aqui é definido o tempo que a linha vermelha percorre de cima a baixo */
+  animation: mover-linha 3s linear infinite; 
+}
+
+@keyframes mover-linha {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: calc(100% - 2px);
+  }
+  100% {
+    top: 0;
+  }
+}
+
+.botscanner{
+  width: 45%; 
+  height: 50px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 15px;
+  background-color: #098171d8;
+  color: #fff;
+  border: none;
+  text-align: center;
+}
+
+.botscanner:hover {
+  background-color: #056659;
+}
+
+.input{
+  width: 100%;
+  padding: 20px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #056659bb;
+  border: none;
+  outline: none;
+  font-weight: 300;
+  color: #fff;  
+}
+
+.input::placeholder{
+  color: #fff;
+}
+
